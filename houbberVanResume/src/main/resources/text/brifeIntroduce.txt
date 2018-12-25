@@ -1,0 +1,1 @@
+        2年Java Web全栈工程师经验，熟悉Spring、SpringBoot +SpringMVC +MyBatis以及web3.0中Servlet+JSP+JavaBean的开发模式，熟练使用MySql、SQLServelet数据库，熟悉SQL语句， 具备扎实的Java基础，深入理解OOP编程思想，具有良好的编码习惯， 熟练掌握HTML、CSS、JavaScript、Ajax、jQuery、Easyui、bootstrap、Echarts等前台开发技术， 熟练使用Git、Maven等项目版本管理及构建工具。

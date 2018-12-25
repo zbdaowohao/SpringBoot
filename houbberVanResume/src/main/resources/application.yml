@@ -1,0 +1,33 @@
+#主页: http://127.0.0.1:8088/resume/home (https://127.0.0.1:8443/resume/home)
+server:
+  port: 8443
+  context-path: /resume
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-password: 610547
+    keyStoreType: PKCS12
+    keyAlias: tomcat
+
+spring:
+  http:
+    encoding.charset: UTF-8
+    encoding.enable: true
+    encoding.force: true
+  mvc:  
+    view:  
+      prefix: /WEB-INF/pages/
+      suffix: .jsp
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/houbber_resume?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: 610547
+    cachePrepStmts: true
+    prepStmtsSize: 250
+    prepStmtsCacheSqlLimit: 2048
+    userServerPrepStmts: true
+    
+mybatis:
+  type-aliases-package: com.ads.model
+  config-locations: classpath:/mybatis/mybatis-config.xml
+  mapper-locations: classpath:/mybatis/mapper/*.xml
