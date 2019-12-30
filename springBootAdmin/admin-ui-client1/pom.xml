@@ -10,7 +10,7 @@
 		<relativePath />
 	</parent>
 	<groupId>com.ads</groupId>
-	<artifactId>admin-ui-client</artifactId>
+	<artifactId>admin-ui-client1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>admin-ui-client</name>
 	<description>Demo project for Spring Boot</description>
