@@ -1,0 +1,52 @@
+#主页: http://127.0.0.1:8088/demo/index
+server:
+  port: 8088
+  context-path: /demo
+  
+#监控: http://127.0.0.1:8099/health
+management:
+  port: 8099
+  security:
+    enabled: false
+
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  http:
+    encoding.charset: UTF-8
+    encoding.enable: true
+    encoding.force: true
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/houbber_resume?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: 610547
+    cachePrepStmts: true
+    prepStmtsSize: 250
+    prepStmtsCacheSqlLimit: 2048
+    userServerPrepStmts: true
+  #热部署默认true,路径监听src/main,一些静态资源修改不需要重启
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main
+      exclude: static/**,WEB-INF/**
+  
+#mybatis  
+mybatis:
+  #实体类所做包
+  type-aliases-package: com.ads.model
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+#pagehelper
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+#logback
+logging:
+  config: classpath:logback-spring.xml
+  path: logs
